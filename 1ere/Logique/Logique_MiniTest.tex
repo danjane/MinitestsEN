@@ -1,0 +1,108 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[12pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+% \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+\pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.2cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+\renewcommand{\arraystretch}{1.5} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\begin{document}
+
+\textbf{Nom:} \dotfill
+
+\
+\begin{questions}
+
+
+\question[1] Un frère et une sœur sont nés un en été et un en hiver. \\
+La sœur n'est pas née en hiver.
+Qui est né en été ?
+
+\fillwithdottedlines{7mm}
+
+\question[4] Remplir les cases centrales avec le symbole pertinent (ou le laisser vide si nécessaire)
+\vspace{-4mm}
+$$ \Rightarrow \qquad \Leftarrow \qquad \mathrm{ou} \qquad  \Leftrightarrow$$
+\vspace{-12mm}
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+il y a des nuages           & \hbox to 3cm{} & il pleut              \\ \hline
+je suis à Rousseau          &  & je suis à Genève      \\ \hline
+je suis Anglais             &  & je suis un prof       \\ \hline
+le verre est à moitié plein &  & le verre est à moitié vide \\ \hline
+\end{tabular}
+\end{center}
+
+\question[4] ``Si deux nombres sont impairs, alors leur produit est aussi impaire''
+\begin{parts}
+\part Donner un exemple avec deux nombres quand cette proposition soit vraie.
+\fillwithdottedlines{7mm}
+\part Donner l'hypothèse de cette proposition.
+\fillwithdottedlines{7mm}
+\part Donner la conclusion de cette proposition.
+\fillwithdottedlines{7mm}
+\part Démontrer cette proposition.
+\fillwithdottedlines{14mm}
+\end{parts}
+
+\question \textbf{Bonus.} Le professeur se rendait à son laboratoire en dehors de la ville à une vitesse constante (pas plus de 90 km/h).
+À un moment donné, le compteur indiquait un kilométrage de 16961 km. Dans exactement 2 heures, le compteur affichait à nouveau un nombre qui se lit de la même façon dans les deux sens. \\
+À quelle vitesse (km/h) le professeur roulait-il ? \hfill \emph{Travailler sur le verso.}
+
+\end{questions}
+
+\vfill
+
+\begin{tcolorbox}
+
+\textbf{Nom du correcteur:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,103 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[12pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+% \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+\pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.2cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+\renewcommand{\arraystretch}{1.5} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\begin{document}
+
+\textbf{Nom:} \dotfill
+
+\
+\begin{questions}
+
+
+\question[4] Remplir le tableau.
+
+\begin{tabular}{|l|l|}
+\hline
+Expression avec multiplication & Expression avec exposant \\ \hline
+$4 \cdot  4 \cdot 4 $                               &          $4^3$                 \\ \hline
+ $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2$                           &                          \\ \hline
+                               &     $x^5$                     \\ \hline
+$(a + b) \cdot(a + b) \cdot(a + b)$                               &                          \\ \hline
+\end{tabular}
+
+\question[6] Remplir les valeurs.
+
+\begin{tabular}{|l|l|}
+\hline
+Expression & Valeurs \\ \hline
+$5^2$                               &       25                   \\ \hline
+$25^0$                              &                          \\ \hline
+$10^2$                              &                          \\ \hline
+$2^{10}$                              &                          \\ \hline
+$19^1$                              &                          \\ \hline
+$3^4$                              &                          \\ \hline
+$(3^2)^2$                              &                          \\ \hline
+\end{tabular}
+
+\question[2] Vrai ou faux ? $2^{100} < 1000^{10}$
+\fillwithdottedlines{21mm}
+
+\vfill
+
+\question \textbf{Bonus.} Pour obtenir $8^8$, à quelle puissance faut-il élever $4^4$? \hfill \emph{Travailler sur le verso.}
+
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Nom du correcteur:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

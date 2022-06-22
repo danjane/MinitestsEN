@@ -1,0 +1,93 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[12pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+% \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+\pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.2cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+%\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\begin{document}
+
+\textbf{Nom:} \dotfill
+
+\
+\begin{questions}
+
+\question[3] Etudier le nombre \textbf{2721}, donné en décimal.
+\begin{parts}
+\part Le premier chiffre de 2 (le plus à gauche) représente quelle quantité?
+\fillwithdottedlines{7mm}
+\part Le deuxième chiffre de 2 représente quelle quantité?
+\fillwithdottedlines{7mm}
+\part Expliquer comment le même chiffre peut représenter deux quantités différentes.
+\fillwithdottedlines{7mm} 
+\end{parts}
+
+\question[2] Ecrire les puissances de 2, de $2^0=1$ jusqu'à $2^{10}=1024$.
+\fillwithdottedlines{21mm}
+
+\question[2] Donner la quantité 1011b en décimal.
+\fillwithdottedlines{14mm}
+
+\question[2] Donner la quantité 43 en binaire.
+\fillwithdottedlines{28mm}
+
+\question \textbf{Bonus.} Donner la quantité 43o (base 8) en binaire.
+\fillwithdottedlines{28mm}
+
+\end{questions}
+
+\vfill
+
+\begin{tcolorbox}
+
+\textbf{Nom du correcteur:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,113 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[12pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+% \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+\pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.2cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+\renewcommand{\arraystretch}{1.5} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\begin{document}
+
+\textbf{Nom:} \dotfill
+
+\
+\begin{questions}
+
+
+\question[2] Ecrire les premiers 20 carrés : $1; 4; \ldots 200.$
+
+\fillwithdottedlines{14mm}
+
+\question[3] Nous allons comparer $\sqrt{9+16}$ et $\sqrt{9} + \sqrt{16}$.
+
+\begin{parts}
+\part Calculer $\sqrt{9+16}$.
+\vspace{-3mm}
+\uplevel{
+\textbf{Attention !} La symbole de la racine sous-entend des paranthèses, donc $\sqrt{(9+16)}$.
+}
+\fillwithdottedlines{8mm}
+
+\part Calculer $\sqrt{9} + \sqrt{16}$.
+\fillwithdottedlines{8mm}
+
+\part Vrai ou faux $\sqrt{9+16} = \sqrt{9} + \sqrt{16}$ ?
+\fillwithdottedlines{8mm}
+\end{parts}
+
+\question[3] Nous allons comparer $\sqrt{4 \cdot 25}$ et $\sqrt{4} \cdot \sqrt{25}$.
+
+\begin{parts}
+\part Calculer $\sqrt{4\cdot25}$.
+\fillwithdottedlines{8mm}
+
+\part Calculer $\sqrt{4} \cdot \sqrt{25}$.
+\fillwithdottedlines{8mm}
+
+\part Vrai ou faux $\sqrt{4\cdot25} = \sqrt{4} \cdot \sqrt{25}$ ?
+\fillwithdottedlines{8mm}
+\end{parts}
+
+\question[1] Trouver la valeur de $\sqrt{6} \cdot \sqrt{10} \cdot \sqrt{15}$.
+\fillwithdottedlines{14mm}
+
+\vfill
+
+\question \textbf{Bonus.} Déterminer la valeur de $$ x = \sqrt{2+\sqrt {2+\sqrt { 2+\ldots}}}$$
+\emph{Indice:} CRM p. 16. \hfill \emph{Travailler sur le verso.}
+
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Nom du correcteur:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

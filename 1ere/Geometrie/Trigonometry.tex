@@ -44,7 +44,7 @@
 \usepackage{enumitem} % can change the labels on lists, items, enumerates
 \usepackage{setspace}
 
-%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usepackage{tikz, tkz-euclide} % interval diagrams, sets, etc.
 %\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
 
 \begin{document}
@@ -55,47 +55,80 @@
 \begin{questions}
 
 
-\question[4] \textbf{Fill in} \emph{(remplir)}  the table.
+\question[2] Take a \textbf{triangle} with sidelengths $a < b < c$. In order to apply \textbf{Pythagoras' Theorem}, we must check that the triangle is...
+\fillwithdottedlines{7mm}
+If this hypothesis is true, then we can conclude what \textbf{equation} relating $a$, $b$ and $c$ ?
+\fillwithdottedlines{7mm}
 
-\begin{tabular}{|l|l|}
-\hline
-Expression with multiplication & Expression with exponent \\ \hline
-$4 \cdot  4 \cdot 4 $                               &          $4^3$                 \\ \hline
- $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot 2$                           &                          \\ \hline
-                               &     $x^5$                     \\ \hline
-$(a + b) \cdot(a + b) \cdot(a + b)$                               &                          \\ \hline
-\end{tabular}
+\question[4] Find the named lengths. \emph{State a formula before using it!}
+\vspace{-5mm}
 
-\
+\begin{minipage}{0.7\textwidth}
+\vspace{3mm}
+\fillwithdottedlines{50mm}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
 
-Reminder: the little number above and to the right is called an \textbf{exponent} \emph{(exposant)}.
-\question[6] Fill in the values.
+\begin{tikzpicture}[scale=0.6, rotate=15]
+\draw[thick] (0, 0)  -- node[left] {3} (0,3) -- node[above]{$x$}  (4,0) --node[below]{4} cycle;
+\draw[thick] (4,0) -- node[right] {$y$} (6.5,6) -- node[above left] {13} (0,3);
+\draw (0,0) rectangle ++(0.4, 0.4);
+\draw (4,0) -- (3.7, 0.28) -- (3.85, 0.6) -- (4.2, 0.4)-- cycle ;
+\end{tikzpicture}
 
-\begin{tabular}{|l|l|}
-\hline
-Expression & Values \\ \hline
-$5^2$                               &       25                   \\ \hline
-$25^0$                              &                          \\ \hline
-$10^2$                              &                          \\ \hline
-$2^{10}$                              &                          \\ \hline
-$19^1$                              &                          \\ \hline
-$3^4$                              &                          \\ \hline
-$(3^2)^2$                              &                          \\ \hline
-\end{tabular}
 
-\question[2] True or false ? $\quad 2^{100} < 1000^{10}$
+
+\end{center}
+\end{minipage}
+
+\question[3] These two \textbf{triangles} are \textbf{similar}. Find the named lengths.
+\vspace{-5mm}
+
+\begin{center}
+\begin{tikzpicture}[scale= 0.7]
+\draw[thick] (0,0) -- node[below] {10} (4,0) -- node[right] {$z$} (3,1) -- node[above] {6} cycle;
+\end{tikzpicture}
+\hspace{10mm}
+\begin{tikzpicture}[scale= 1.2]
+\draw[thick] (0,0) -- node[below] {20} (4,0) -- node[right] {8} (3,1) -- node[above] {$w$} cycle;
+\end{tikzpicture}
+\end{center}
+\vspace{-2mm}
 \fillwithdottedlines{21mm}
+
 
 \vfill
 
-\question \textbf{Bonus.} Pour obtenir $8^8$, à quelle puissance faut-il élever $4^4$? \hfill \emph{Travailler sur le verso.}
+\question \textbf{Bonus.} 
+What is the shaded area of this square? \hfill \emph{Work on the back.}
+\vspace{-4mm}
+
+\begin{center}
+
+\begin{tikzpicture}
+\coordinate (O) at (0,0);
+\coordinate (A) at (3,0);
+\coordinate (B) at (3,3);
+\coordinate (C) at (1.5,3);
+\coordinate (D) at (0,3);
+
+\fill[black!15] (O)  -- (1, 2) -- (A) -- cycle;
+\draw[thick] (O)-- (A)-- node[right] {6} (B)--(D)--cycle;
+\draw[thick] (O)--(C);
+\draw[thick] (A)--(D);
+\tkzMarkSegment[pos=.5,mark=||](B,C) 
+\tkzMarkSegment[pos=.5,mark=||](C,D) 
+
+\end{tikzpicture}
+\end{center}
 
 
 \end{questions}
 
 \begin{tcolorbox}
 
-\textbf{Name of marker:}
+\textbf{Name of the marker:}
 
 \begin{center}
 \gradetable[h][questions]

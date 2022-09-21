@@ -1,17 +1,17 @@
 % \documentclass[12pt]{article}
 
 %%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
- \documentclass[12pt]{exam} 
+ \documentclass[8pt]{exam} 
 % \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
  \renewcommand{\thesubpart}{(\roman{subpart})}
  \renewcommand{\subpartlabel}{\thesubpart}
-% \footer{}{}{Page \thepage\ de \numpages}
+ \footer{}{}{Page \thepage\ de \numpages}
 \addpoints
-\pointsinmargin
+% \pointsinmargin
 % \boxedpoints
-\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
 \renewcommand{\partshook}{
-	\setlength{\itemsep}{0.2cm}
+	\setlength{\itemsep}{0.1cm}
 }
 
 \usepackage{cmbright}
@@ -19,7 +19,7 @@
 \pagestyle{empty} %for handouts
 \addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
 \setlength{\parindent}{0pt} %we're not writing a novel
-\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
 
 \usepackage[fleqn]{amsmath}
 \usepackage{amssymb} %standard classy maths symbols
@@ -30,12 +30,12 @@
 
 \usepackage[utf8]{inputenc}
 
-%\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
 % \usepackage{lmodern} % font with nicer French characters than standard
 % \usepackage{textcomp} % and more help for special characters
 
 \usepackage{tcolorbox} % basic but good package for boxes around text
-%\tcbset{colback=black!5!white}
+\tcbset{colback=black!5!white}
 % \usepackage{color} % colours
 %\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
 %\definecolor{fillin}{rgb} {1.00,1.00,1.00}
@@ -44,44 +44,54 @@
 \usepackage{enumitem} % can change the labels on lists, items, enumerates
 \usepackage{setspace}
 
-%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
-%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\newcommand\TikCircle[1][2.5]{\tikz[baseline=-#1]{\draw[thick](0,0)circle(3mm)[radius=#1mm];}}
 
 \begin{document}
 
-\textbf{Name:} \dotfill
+\textbf{Name:} \dotfill Consider the function $f( x ) = x^2 + 8x + 12$
 
 \begin{questions}
+\question[2] Complete the square and then use \emph{le troisième identité remarquable} to find the zeros of $f$. \\
+\emph{Or for just one point, find the zeros with Viète:} $\frac{-b \pm \sqrt{b^2-4ac}}{2a}$
+\fillwithdottedlines{5cm}
 
-\question[3] Let's study the number \textbf{2721}, given as a \textbf{decimal}.
-\begin{parts}
-\part What quantity does the first 2 (to the left) represent? \hfill \textbf{2}721
-\fillwithdottedlines{7mm}
-\part What quantity does the second 2 represent? \hfill 27\textbf{2}1
-\fillwithdottedlines{7mm}
-\part Explain how the same \textbf{digit} \emph{(chiffre)} can represent different quantities.
-\fillwithdottedlines{7mm} 
-\end{parts}
+\question[4] Sketch the graph $y = f(x)$.
 
-\question[2] Write down the \textbf{powers} \emph{(puissances)} of 2, from $2^0=1$ until $2^{10}=1024$.
-\fillwithdottedlines{21mm}
+\vspace{-2mm}
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0mm}
 
-\question[2] Convert the \textbf{binary} quantity 1011b into decimal (base 10).
-\fillwithdottedlines{14mm}
+\fillwithdottedlines{65mm}
 
-\question[2]  Convert the \textbf{decimal} quantity 43 into binary (base 2).
-\fillwithdottedlines{28mm}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0mm}
 
-\question \textbf{Bonus.} Convert the quantity 43o \textbf{given in base 8} into binary.
-\fillwithdottedlines{28mm}
+\begin{tikzpicture}[scale=0.4]
+\draw[thick, ->] (-8,0) -- (8,0) node[above] {$x$};
+\draw[thick, ->] (0,-8) -- (0,8) node[right] {$y$};
 
-\end{questions}
+
+\end{tikzpicture}
+\end{minipage}
+
+\question[2] Solve the equation $(x+a)^2 = x^2+2x$, with $a\in \mathbb{R}$ a fixed parameter.
+\fillwithdottedlines{45mm}
+
+\question \textbf{Bonus.} To obtain $8^8$, to what power should one raise $4^4$?  \emph{Work overleaf.}
 
 \vfill
 
+
+\end{questions}
+
 \begin{tcolorbox}
 
-\textbf{Name of marker:}
+\textbf{Name of examiner:}
 
 \begin{center}
 \gradetable[h][questions]

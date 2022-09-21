@@ -1,17 +1,17 @@
 % \documentclass[12pt]{article}
 
 %%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
- \documentclass[12pt]{exam} 
+ \documentclass[8pt]{exam} 
 % \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
  \renewcommand{\thesubpart}{(\roman{subpart})}
  \renewcommand{\subpartlabel}{\thesubpart}
-% \footer{}{}{Page \thepage\ de \numpages}
+ \footer{}{}{Page \thepage\ de \numpages}
 \addpoints
-\pointsinmargin
+% \pointsinmargin
 % \boxedpoints
-\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
 \renewcommand{\partshook}{
-	\setlength{\itemsep}{0.2cm}
+	\setlength{\itemsep}{0.1cm}
 }
 
 \usepackage{cmbright}
@@ -19,7 +19,7 @@
 \pagestyle{empty} %for handouts
 \addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
 \setlength{\parindent}{0pt} %we're not writing a novel
-\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
 
 \usepackage[fleqn]{amsmath}
 \usepackage{amssymb} %standard classy maths symbols
@@ -30,12 +30,12 @@
 
 \usepackage[utf8]{inputenc}
 
-%\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
 % \usepackage{lmodern} % font with nicer French characters than standard
 % \usepackage{textcomp} % and more help for special characters
 
 \usepackage{tcolorbox} % basic but good package for boxes around text
-%\tcbset{colback=black!5!white}
+\tcbset{colback=black!5!white}
 % \usepackage{color} % colours
 %\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
 %\definecolor{fillin}{rgb} {1.00,1.00,1.00}
@@ -44,44 +44,52 @@
 \usepackage{enumitem} % can change the labels on lists, items, enumerates
 \usepackage{setspace}
 
-%\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
-%\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\newcommand\TikCircle[1][2.5]{\tikz[baseline=-#1]{\draw[thick](0,0)circle(3mm)[radius=#1mm];}}
 
 \begin{document}
 
-\textbf{Name:} \dotfill
+\textbf{Name:}
 
 \begin{questions}
+\question[4] Solve the following simultaneous equations
+$ \quad
+\left\{\begin{array}{ccccc}
+ 3x  & + & 5y & = & 28 \\
+ 2x  & - & 7y & = & -2
+\end{array}\right.
+$
+\fillwithdottedlines{5cm}
 
-\question[3] Let's study the number \textbf{2721}, given as a \textbf{decimal}.
+\question Let $\displaystyle f(x) = \frac{4-2x}{x+3}.$
 \begin{parts}
-\part What quantity does the first 2 (to the left) represent? \hfill \textbf{2}721
-\fillwithdottedlines{7mm}
-\part What quantity does the second 2 represent? \hfill 27\textbf{2}1
-\fillwithdottedlines{7mm}
-\part Explain how the same \textbf{digit} \emph{(chiffre)} can represent different quantities.
-\fillwithdottedlines{7mm} 
+\part[1] Calculate and simplify $f(-1) + f(1)$
+\fillwithdottedlines{2cm}
+
+\part[1] Calculate the y-intercept of $f$.
+\fillwithdottedlines{15mm}
+
+\part[1] Determine the domain of $f$.
+\fillwithdottedlines{2cm}
+
+\part[1] Calculate and simplify $f(4)^2 \div f(11)$.
+\fillwithdottedlines{4cm}
+
 \end{parts}
-
-\question[2] Write down the \textbf{powers} \emph{(puissances)} of 2, from $2^0=1$ until $2^{10}=1024$.
-\fillwithdottedlines{21mm}
-
-\question[2] Convert the \textbf{binary} quantity 1011b into decimal (base 10).
-\fillwithdottedlines{14mm}
-
-\question[2]  Convert the \textbf{decimal} quantity 43 into binary (base 2).
-\fillwithdottedlines{28mm}
-
-\question \textbf{Bonus.} Convert the quantity 43o \textbf{given in base 8} into binary.
-\fillwithdottedlines{28mm}
-
-\end{questions}
 
 \vfill
 
+\question \textbf{Bonus.} Calculate the value of $\displaystyle x = \frac{1}{1+\frac{1}{1+\frac{1}{1+ \cdots}}}$ where the fractions continue forever. \hfill \emph{Work overleaf.}
+
+
+
+\end{questions}
+
 \begin{tcolorbox}
 
-\textbf{Name of marker:}
+\textbf{Name of examiner:}
 
 \begin{center}
 \gradetable[h][questions]

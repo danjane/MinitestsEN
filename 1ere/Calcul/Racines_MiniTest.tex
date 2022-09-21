@@ -9,7 +9,7 @@
 \addpoints
 \pointsinmargin
 % \boxedpoints
-\renewcommand{\questionshook}{\setlength{\itemsep}{4mm}}
+\renewcommand{\questionshook}{\setlength{\itemsep}{6mm}}
 \renewcommand{\partshook}{
 	\setlength{\itemsep}{0.2cm}
 }
@@ -30,7 +30,7 @@
 
 \usepackage[utf8]{inputenc}
 
-\usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
 % \usepackage{lmodern} % font with nicer French characters than standard
 % \usepackage{textcomp} % and more help for special characters
 
@@ -47,62 +47,79 @@
 %\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
 %\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
 
+% Use a 'closing' sqrt symbol
+\usepackage{letltxmacro}
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+\setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2}}
+\makeatother
+
 \begin{document}
 
-\textbf{Nom:} \dotfill
+\begin{minipage}{0.7\textwidth}
+\textbf{Name:} \dotfill
+\end{minipage}
+\hfill
+\textbf{No calculators}
 
-\
 \begin{questions}
 
 
-\question[2] Ecrire les premiers 20 carrés : $1; 4; \ldots 200.$
+\question[2] \textbf{Write down} \emph{(écrire)} the first 20 \textbf{squares} \emph{(carrés)} : $1; 4; 9; \ldots 200.$
 
 \fillwithdottedlines{14mm}
 
-\question[3] Nous allons comparer $\sqrt{9+16}$ et $\sqrt{9} + \sqrt{16}$.
+\question[3] Let's compare $\sqrt{9+16}$ and $\sqrt{9} + \sqrt{16}$.
 
 \begin{parts}
-\part Calculer $\sqrt{9+16}$.
+\part Calculate $\sqrt{9+16}$
 \vspace{-3mm}
 \uplevel{
-\textbf{Attention !} La symbole de la racine sous-entend des paranthèses, donc $\sqrt{(9+16)}$.
+\textbf{Attention !} \emph{La symbole de la racine sous-entend des paranthèses, ici} $\Big(\sqrt{(9+16)} \Big)$.
 }
 \fillwithdottedlines{8mm}
 
-\part Calculer $\sqrt{9} + \sqrt{16}$.
-\fillwithdottedlines{8mm}
+\part Calculate $\sqrt{9} + \sqrt{16} = $  \dotfill
 
-\part Vrai ou faux $\sqrt{9+16} = \sqrt{9} + \sqrt{16}$ ?
-\fillwithdottedlines{8mm}
+\part True or false :  $\sqrt{9+16} = \sqrt{9} + \sqrt{16}$ ? \dotfill
+
 \end{parts}
 
-\question[3] Nous allons comparer $\sqrt{4 \cdot 25}$ et $\sqrt{4} \cdot \sqrt{25}$.
+\question[3] Let's compare $\sqrt{4 \cdot 25}$ and $\sqrt{4} \cdot \sqrt{25}$.
 
 \begin{parts}
-\part Calculer $\sqrt{4\cdot25}$.
-\fillwithdottedlines{8mm}
+\part Calculate $\sqrt{4\cdot25}= $  \dotfill
 
-\part Calculer $\sqrt{4} \cdot \sqrt{25}$.
-\fillwithdottedlines{8mm}
+\part Calculate $\sqrt{4} \cdot \sqrt{25}= $  \dotfill
 
-\part Vrai ou faux $\sqrt{4\cdot25} = \sqrt{4} \cdot \sqrt{25}$ ?
-\fillwithdottedlines{8mm}
+\part True or false $\sqrt{4\cdot25} = \sqrt{4} \cdot \sqrt{25}$ \dotfill
 \end{parts}
 
-\question[1] Trouver la valeur de $\sqrt{6} \cdot \sqrt{10} \cdot \sqrt{15}$.
-\fillwithdottedlines{14mm}
+\question[1] Which of these expressions are \textbf{always} \emph{(toujours)} true? Circle the correct rule.
+
+$$ \sqrt{a + b} = \sqrt{a} + \sqrt{b} \hspace{15mm} \sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$$
+
+\question[1] \textbf{Find} \emph{(trouver)} the value of $\sqrt{6} \cdot \sqrt{10} \cdot \sqrt{15}= $  \dotfill
+\fillwithdottedlines{13mm}
 
 \vfill
 
-\question \textbf{Bonus.} Déterminer la valeur de $$ x = \sqrt{2+\sqrt {2+\sqrt { 2+\ldots}}}$$
-\emph{Indice:} CRM p. 16. \hfill \emph{Travailler sur le verso.}
+\question \textbf{Bonus.} Find the value of $$ x = \sqrt{2+\sqrt {2+\sqrt { 2+\ldots}}}$$
+\emph{Indice:} CRM p. 16. 
+\hfill \textbf{Work on the back} \emph{(travailler sur le verso.)}
 
 
 \end{questions}
 
 \begin{tcolorbox}
 
-\textbf{Nom du correcteur:}
+\textbf{Name of marker:}
 
 \begin{center}
 \gradetable[h][questions]

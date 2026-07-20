@@ -1,0 +1,119 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[9pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+ \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.1cm}
+}
+
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\begin{document}
+
+We will study the function $\displaystyle f(x) = \frac{1}{x+2} - \frac{1}{x+3}$ throughout. \quad \textbf{Name:} \dotfill
+
+\begin{questions}
+
+\question 
+\begin{parts}
+\part[2]
+Determine the domain of $f$.
+\fillwithdottedlines{15mm}
+\part[1] Calculate the $y$-intercept of $f$. \hfill \emph{As a reduced fraction! Without that calculator!}
+\fillwithdottedlines{15mm}
+\part[3] Simplify the expression to show that $\displaystyle f(x) = \frac{1}{(x+2)(x+3)}$
+\fillwithdottedlines{50mm}
+\part[1] Give the zeros of $f$.
+\fillwithdottedlines{15mm}
+\part[1] Explain how you can tell that $f$ has a horizontal asymptote $\{y = 0\}$.
+\fillwithdottedlines{10mm}
+
+\end{parts}
+
+\begin{minipage}[t]{0.4\textwidth}
+\question[5] Calculate the sign table for $f$.
+
+\
+
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{|p{15mm}|*{5}{p{5mm}|}}
+\hline
+&  &  &  &  &  \\ \hline
+    &  &  &  &  &  \\ \hline
+    &  &  &  &  &  \\ \hline
+    &  &  &  &  &  \\ \hline
+\end{tabular}
+
+\end{minipage}
+\hfill 
+\begin{minipage}[t]{0.4\textwidth}
+\question[5] Sketch the curve $y=f(x)$. 
+
+\
+
+\begin{tikzpicture}
+
+\draw[-latex] (-5, 0) -- (2, 0);
+\draw[-latex] (0, -2) -- (0, 2);
+
+\end{tikzpicture}
+
+\end{minipage}
+
+\vfill
+\question \textbf{Bonus.} Show that $x^n+1$  is divisible by $x+1$ if, and only if, $n$ is an odd integer.
+
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

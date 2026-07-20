@@ -1,0 +1,138 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[8pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+ \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+% \pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.1cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes,angles,quotes}
+
+\newcommand\TikCircle[1][2.5]{\tikz[baseline=-#1]{\draw[thick](0,0)circle(3mm)[radius=#1mm];}}
+
+\begin{document}
+
+
+\begin{minipage}{0.7\textwidth}
+\begin{tcolorbox}[width=10cm]
+Reminder, from p. 32 of CRM. \\
+\textbf{The sine rule :}
+
+\
+
+$\displaystyle \frac{a}{\sin(\alpha)} = \frac{b}{\sin(\beta)} = \frac{c}{\sin(\gamma)}$
+\vspace{-20mm}
+
+\hfill\begin{tikzpicture}
+
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3,0);
+  \coordinate (C) at (4,2);
+
+  \draw (C) node[right] {$C$} -- node[right]{$a$}  (B) node[right] {$B$} --  node[below] {$c$} (A) node[left] {$A$}  -- node[above] {$b$} cycle;
+
+\pic [angle radius=6mm, draw=gray, "$\beta$" ] {angle=C--B--A};
+\pic [angle radius=11mm, draw=gray,"$\gamma$"] {angle=A--C--B};
+\pic [angle radius=14mm, draw=gray, "$\alpha$" ] {angle=B--A--C};
+
+\end{tikzpicture}
+
+\vspace{-2mm}
+\end{tcolorbox}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\textbf{Name:} \dotfill
+
+\vspace{8mm}
+\dotfill
+\end{minipage}
+
+
+
+
+\begin{questions}
+
+\question[4] Determine the value of $x$.
+
+\begin{minipage}{0.7\textwidth}
+\vspace{0mm}
+
+\fillwithdottedlines{49mm}
+
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\begin{tikzpicture}[scale=1, rotate=30]
+  \coordinate (A) at (-1,0);
+  \coordinate (B) at (4,0);
+  \coordinate (C) at (0,3);
+%  \draw (A) rectangle ++(0.5, 0.5);
+  \draw[thick] (A) --  node [below] {$3$} (B) -- node[above right] {$x$} (C) -- cycle;
+  \pic [angle radius=1.0cm, draw=black, "$\frac{2\pi}{3}$"] {angle=A--C--B};
+  \pic [angle radius=1.6cm, draw=black, "$\frac{\pi}{12}$"] {angle=C--B--A};
+\end{tikzpicture}
+
+\end{minipage}
+\vspace{-4mm}
+\fillwithdottedlines{\stretch{1}}
+
+%\question[5] $\triangle XYZ$ is right-angled in $X$ with $\hat{Y} = 40^\circ$. Given that $\overline{XY} = 12$, calculate $\overline{YZ}$ to 1 d.p.
+%\fillwithdottedlines{63mm}
+
+\question[2] In class we proved the angle addition formula (see CRM p. 30), $$\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta).$$ Using $\alpha = \frac{\pi}{4}$ and $\beta = -\frac{\pi}{6}$ find an exact value for $\sin \frac{\pi}{12}$.
+\fillwithdottedlines{\stretch{1}}
+
+
+\question[0] \textbf{Bonus.} If $\tan \theta = \frac{3}{4}$, what is $\sin 2 \theta$? \hfill \emph{Work on the back.}
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of examiner:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

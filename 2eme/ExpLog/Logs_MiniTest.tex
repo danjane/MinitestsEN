@@ -1,0 +1,93 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[8pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+ \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+\pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.1cm}
+}
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\pgfdeclarelayer{background}
+\pgfsetlayers{background,main}
+
+\begin{document}
+
+\small
+
+\textbf{Name:} \dotfill
+
+\
+
+\begin{questions}
+
+\question[3] Solve for $x$ and verify your solution: $\displaystyle \qquad 36^{3-3x} = \Big( \frac{1}{216} \Big)^{x + 1}$
+\fillwithdottedlines{35mm}
+
+
+
+\question[2] Using a calculator, giving your answer to 2 decimal places, determine the value of $2^{5043} \cdot 5^{2557} \cdot 2023^{-1000}.$
+\fillwithdottedlines{42mm}
+
+
+\question[5] Give the domain and sketch the function $f(x) = \log_2 \big( 4x + 4\big )$. \hfill  \emph{Remember the intersections!}
+\fillwithdottedlines{\stretch{1}}
+
+\question[0] \textbf{Bonus.} Give \textbf{all} the maximal interval domain(s) and codomain(s) for which $x \to \exp \big( x^2 \big)$ is bijective.
+
+
+\question[0] \textbf{Bonus.} Can you, \textbf{without} a calculator, arrange these logarithms in order of increasing value? \emph{Work on the back.}
+$$ \log_4 5 \quad \log_2 5 \quad \log_3 4 \quad \log_3 3 \quad \log_3 5 \quad \log_2 4 \quad \log_2 3 $$
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

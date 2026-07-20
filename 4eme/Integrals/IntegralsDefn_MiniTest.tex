@@ -1,0 +1,77 @@
+\documentclass[12pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+\question[3] 
+Calculate the derivatives of the following functions :  
+ \vspace{2mm}
+\begin{parts}
+  \part $f(x) = x \sin(x)$ \dotfill
+  \fillwithdottedlines{7mm}
+  \part $g(x) = \tfrac{3}{2}x^2$   \dotfill
+  \fillwithdottedlines{7mm}
+  \part $h(x) = 1/x$ \dotfill
+  \fillwithdottedlines{7mm}
+
+\end{parts}
+
+\question[3]
+Compute $\displaystyle \int_{0}^{4} 3x \, dx$ as an area under a curve.  \hfill \emph{1 point for a good sketch.}
+\vspace{6cm}
+
+\question[3]
+Compute $\displaystyle \int_{0}^{4} 3x \, dx$  using the definition of the integral and a formula for the sum.
+\fillwithdottedlines{6cm}
+
+\question
+\begin{parts}
+
+\part[1] Which of the functions $f$, $g$ or $h$ is the antiderivative of $x \mapsto 3x$ ? \dotfill
+
+\part[2] 
+Compute  $\displaystyle \int_{0}^{4} 3x \, dx$ using the Evaluation Theorem (theorem 1).
+\fillwithdottedlines{6cm}
+\end{parts}
+
+\question[0] Which method did you prefer using? Why? \dotfill
+\fillwithdottedlines{10mm}
+
+\question[0] \textbf{Bonus.} Compute $\displaystyle \int_{0}^{\pi/2}  \sin(x) + x \cos(x) \, dx.$
+\vfill
+
+
+\question[0] \textbf{Bonus.}  
+Compute $\displaystyle \int_{0}^{a} kx \, dx$ for constants $k>0$ and $a>0$.
+\vfill
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

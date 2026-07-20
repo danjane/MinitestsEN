@@ -1,0 +1,139 @@
+\documentclass[9pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage{amsmath, amssymb}
+\usepackage[a4paper, margin=20mm]{geometry} 
+\usepackage{tcolorbox} 
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+% -------------------
+\question[5] Warm-up! Let $f(x) = e^{-x}$.
+\begin{parts}
+\begin{minipage}[t]{0.45\textwidth}
+\part Find the derivative of $f$. 
+\fillwithdottedlines{35mm}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0mm}
+\part Sketch $y=f(x)$.
+
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-4,0)--(4,0) node[below]{$x$};
+\draw[->] (0,-0.5)--(0,4) node[left]{$y$};
+\draw (-0.1,1) node[left]{$1$} --(0.1,1);
+\end{tikzpicture}
+
+\end{minipage}
+\end{parts}
+
+% -------------------
+\question[12] Now we start the real work. Let $h(x) = x^2 e^{-x}$. 
+
+\begin{parts}
+
+\part Explain why the domain of $h$ is $\mathbb{R}$.
+\fillwithdottedlines{15mm}
+
+\part Calculate the $y$-intercept of $h$. \dotfill
+
+\part Calculate the zero(s) of $h$.
+\fillwithdottedlines{25mm}
+
+\begin{minipage}[t]{0.45\textwidth}
+
+\part Show that $h'(x) = x \, (2 - x) \, e^{-x}$.
+\fillwithdottedlines{65mm}
+
+\part Find the zeros of $h'$.
+\fillwithdottedlines{28mm}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+
+\part Determine the co-ords of turning points.
+\fillwithdottedlines{35mm}
+
+\part Complete the variation table:
+
+\vspace{2mm}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|p{1cm}|p{1cm}|p{1cm}|c|c|}
+\hline
+$x$ & $-\infty$ &  & & & $+\infty$ \\
+\hline
+ &  &  &  & &  \\
+\hline
+ &  &  &  & &  \\
+\hline
+$h(x)$ &  &  &  & &  \\
+\hline
+ &  &  &  & &  \\
+\hline
+ &  &  &  & &  \\
+\hline
+ &  &  &  & &  \\
+\hline
+$h'(x)$ &  &  &  & &  \\
+\hline
+$h(x)$ &  &  &  & &  \\
+\hline
+\end{tabular}
+
+\end{minipage}
+
+\end{parts}
+
+\newpage
+
+\question Let's study the asymptotic behaviour of $h(x) = x^2 e^{-x}$.
+
+\begin{parts}
+
+\part[2] Compute $\displaystyle \lim_{x \to \infty} h(x)$.
+\fillwithdottedlines{27mm}
+
+\part[2] Compute $\displaystyle \lim_{x \to -\infty} h(x)$.
+\fillwithdottedlines{27mm}
+
+\part[2] Deduce whether there any asymptotes.
+\fillwithdottedlines{30mm}
+
+\part[5] Sketch $y= h(x)$ below.
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-9,0)--(9,0) node[below]{$x$};
+\draw[->] (0,-1)--(0,6) node[left]{$y$};
+\end{tikzpicture}
+\end{center}
+
+\end{parts}
+
+\vfill
+
+\question[0] \textbf{Bonus.} Calculate $h''(x)$ at the turning points.
+
+\end{questions}
+
+\begin{tcolorbox}
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

@@ -1,0 +1,106 @@
+% \documentclass[12pt]{article}
+
+%%v helpful MIT exam schema, see http://www-math.mit.edu/~psh/exam/examdoc.pdf
+ \documentclass[8pt]{exam} 
+% \qformat{\textbf{Question \thequestion}\quad \thepoints\hfill } % Large depth to make space}
+ \renewcommand{\thesubpart}{(\roman{subpart})}
+ \renewcommand{\subpartlabel}{\thesubpart}
+ \footer{}{}{Page \thepage\ de \numpages}
+\addpoints
+% \pointsinmargin
+% \boxedpoints
+\renewcommand{\questionshook}{\setlength{\itemsep}{0.2cm}}
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{0.1cm}
+}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{siunitx} %v handy way of getting SI units to typeset correctly...
+% \sisetup{locale = FR} %... and now it will use a comma for decimals
+
+\usepackage[utf8]{inputenc}
+
+% \usepackage[french]{babel} % frenchify everything (e.g. a Table becomes a Tableau)
+% \usepackage{lmodern} % font with nicer French characters than standard
+% \usepackage{textcomp} % and more help for special characters
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+% \usepackage{color} % colours
+%\newcommand{\fillin}{\color{black!1!white}} %makes the text disappear
+%\definecolor{fillin}{rgb} {1.00,1.00,1.00}
+%\renewcommand{\fillin}{\color{blue}} \definecolor{fillin}{rgb} {0.00,0.00,1.00} %makes the filling in text appear (in blue)
+
+\usepackage{enumitem} % can change the labels on lists, items, enumerates
+\usepackage{setspace}
+
+\usepackage{tikz, pgfplots} % interval diagrams, sets, etc.
+\usetikzlibrary{calc,trees,positioning,arrows,fit,shapes}
+
+\newcommand\TikCircle[1][2.5]{\tikz[baseline=-#1]{\draw[thick](0,0)circle(3mm)[radius=#1mm];}}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\
+
+\begin{questions}
+
+\question[3] Complete the statement of the theorem describing the conditions on rational roots:
+\vspace{-5mm}
+\fullwidth{
+\begin{center}
+\begin{minipage}{0.8\textwidth}
+\setstretch{2.0}
+
+Let $P(x) = a_n x^n + a_{n-1} x^{n-1} + \ldots + a_1 x + a_0$ be a polynomial with a rational root. We assume the root is $\frac{p}{q}$ in reduced form, which means $p,q \in \mathbb{Z}$ and
+\fillwithdottedlines{1.3cm}
+Then we have the following conditions on $p$ and $q$:
+\fillwithdottedlines{1.3cm}
+
+\end{minipage}
+\end{center}
+}
+
+\question[2] Put numbers in the circles to indicate the correct order of this proof:
+
+\begin{itemize}[label=\TikCircle]
+\item $ a_n p^n = q \Bigg(- a_{n-1} p^{n-1} - \ldots - a_1 pq^{n-2} - a_0 q^{n-1} \Bigg)$
+\item $ a_n \bigg(\dfrac{p}{q}\bigg)^n + a_{n-1} \bigg(\dfrac{p}{q}\bigg)^{n-1} + \ldots + a_1 \bigg(\dfrac{p}{q}\bigg) + a_0 = 0$
+\item $P\bigg(\dfrac{p}{q}\bigg) = 0$
+\item $ a_n p^n + a_{n-1} p^{n-1}q + \ldots + a_1 pq^{n-1}+ a_0 q^n = 0$
+\item $ a_n \dfrac{p^n}{q^n} + a_{n-1} \dfrac{p^{n-1}}{q^{n-1}} + \ldots + a_1 \dfrac{p}{q} + a_0 = 0$
+\end{itemize}
+
+\question[2] Complete the proof to show the condition on $q$
+\fillwithdottedlines{3cm}
+
+\question[3] List the possible \textbf{positive} roots of $2x^{17} + x^3 - 49$ (but no need to check them).
+\fillwithdottedlines{2cm}
+
+
+\vfill
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Name of examiner:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

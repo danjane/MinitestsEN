@@ -1,0 +1,78 @@
+\documentclass[9pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+\question[1] If $X \sim N(0; 1)$, then $P(X < 1.53) = $ \dotfill  \hfill \emph{$\sim$ means "follows a".}
+
+
+\question[3] If $X \sim N(0; 2)$, represent $P(|X| <  1)$ as an area on the graph and then calculate it.
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (-4,0)--(4,0) node[above]{$x$};
+\draw[->] (0,0)--(0,2.3) node[ left]{$y$};
+
+\draw[thick] (-4,0.02) .. controls (-2,0.02) and (-1,1.75) .. (0,1.75) .. controls (1,1.75) and (2,0.02) .. (4,0.02);
+
+%\node at (2.5, 1.5) {$y = \frac{1}{\sqrt{2\pi}} e^{-x^2/2}$};
+
+\end{tikzpicture}
+\end{center}
+\fillwithdottedlines{28mm}
+
+
+\question[4] Let's assume the number of passengers taking the 14 tram is modelled by a normal distribution $X$ each day. The TPG have estimated that $P(X>9'000) = 10\%$ and $P(X>10'000) = 1\%$. \newline
+Use this to calculate the expectation and standard deviation of $X$.
+\fillwithdottedlines{\stretch{1}}
+
+
+\question[0] \textbf{Bonus.}  Let $f(x) = \left\{ \begin{matrix} -\pi, & x < -\pi, \\ x+\sin(x), & x \in [-\pi; \pi], \\ \pi, & \mbox{otherwise.} \end{matrix} \right.$ \hfill {\small \emph{Work on the back, but put your answers here.}}
+\begin{parts}
+\part Determine $f(0)$ and the domain of $f$ \dotfill
+\part Write down $\lim_{x\to-\infty} f(x) = $ \dotfill
+\part Write down $\lim_{x\to\infty} f(x) = $ \dotfill
+%\part Use L'Hopital's rule to calculate $\lim_{x\to\infty} f(x)$ = \dotfill
+\part Determine the derivative $f'(x) =$ \dotfill
+\part For $|a| \leq \pi$ let $P(X < a) = \int_{-\pi}^a \frac{1+\cos(x)}{2\pi} \, dx$. Calculate $P(X < \pi/3)$ = \dotfill
+\end{parts}
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}
+
+\question[0] \textbf{Bonus.}  Let $f(x) = \frac{e^x - 1}{e^x + 1}$. Work on the back, but put your answers here.
+\begin{parts}
+\part Determine $f(0)$ and the domain of $f$ \dotfill
+\part Determine $\lim_{x\to-\infty} f(x) = $ \dotfill
+\part Use L'Hopital's rule to calculate $\lim_{x\to\infty} f(x)$ = \dotfill
+\part Show that the derivative $((e^x - 1)/(e^x + 1))' = 2 e^x/(e^x + 1)^2$.
+\part Let $P(X < a) = \int_{-\infty}^a e^x/(e^x + 1)^2 \, dx$. Calculate $P(X < \ln(2))$ = \dotfill
+\end{parts}

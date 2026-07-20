@@ -1,0 +1,119 @@
+\documentclass[9pt]{exam} 
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz, tkz-euclide} 
+\usetikzlibrary{quotes, angles}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\
+
+\emph{Deck the halls with boughs of holly !} And also let's put red baubles on the Christmas tree so that they form a pattern of equilateral triangles, as below.
+
+\vspace{-5mm}
+
+\begin{center}
+\definecolor{qqwuqq}{rgb}{0.0,0.39215686274509803,0.0}
+\definecolor{ffqqqq}{rgb}{1.0,0.0,0.0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.1,-2.0200000000000067) rectangle (4.180000000000009,6.280000000000002);
+\fill[color=qqwuqq,fill=qqwuqq,fill opacity=0.25] (-3.0,0.0) -- (3.0,0.0) -- (0.0,5.196152422706632) -- cycle;
+\begin{scriptsize}
+\draw [fill=ffqqqq] (0.0,0.0) circle (1.5pt);
+\draw[color=black] (0.1400000000000047,0.27999999999999575) node {$A$};
+\draw [fill=ffqqqq] (1.0,0.0) circle (1.5pt);
+\draw [fill=ffqqqq] (0.5,0.8660254037844386) circle (1.5pt);
+\draw[color=black] (0.6400000000000047,0.8660254037844386+0.27999999999999575) node {$C$};
+\draw [fill=ffqqqq] (0.0,1.7320508075688772) circle (1.5pt);
+\draw [fill=ffqqqq] (1.0,1.7320508075688772) circle (1.5pt);
+\draw [fill=ffqqqq] (1.5,0.8660254037844386) circle (1.5pt);
+\draw [fill=ffqqqq] (2.0,0.0) circle (1.5pt);
+\draw [fill=ffqqqq] (2.0,1.7320508075688772) circle (1.5pt);
+\draw [fill=ffqqqq] (2.5,0.8660254037844386) circle (1.5pt);
+\draw [fill=ffqqqq] (3.0,0.0) circle (1.5pt);
+\draw[color=black] (3.1400000000000077,0.27999999999999575) node {$B$};
+\draw [fill=ffqqqq] (0.5,2.598076211353316) circle (1.5pt);
+\draw [fill=ffqqqq] (1.5,2.598076211353316) circle (1.5pt);
+\draw [fill=ffqqqq] (0.0,3.4641016151377544) circle (1.5pt);
+\draw [fill=ffqqqq] (1.0,3.4641016151377544) circle (1.5pt);
+\draw [fill=ffqqqq] (0.5,4.330127018922193) circle (1.5pt);
+\draw [fill=ffqqqq] (0.0,5.196152422706632) circle (1.5pt);
+\draw[color=black] (0.1400000000000047,0.27999999999999575+5.196152422706632) node {$D$};
+
+\draw [fill=ffqqqq] (-1.0,0.0) circle (1.5pt);
+\draw [fill=ffqqqq] (-2.0,0.0) circle (1.5pt);
+\draw [fill=ffqqqq] (-3.0,0.0) circle (1.5pt);
+\draw [fill=ffqqqq] (-0.5,0.8660254037844386) circle (1.5pt);
+\draw [fill=ffqqqq] (-1.5,0.8660254037844386) circle (1.5pt);
+\draw [fill=ffqqqq] (-2.5,0.8660254037844386) circle (1.5pt);
+\draw [fill=ffqqqq] (-1.0,1.7320508075688772) circle (1.5pt);
+\draw [fill=ffqqqq] (-2.0,1.7320508075688772) circle (1.5pt);
+\draw [fill=ffqqqq] (-0.5,2.598076211353316) circle (1.5pt);
+\draw [fill=ffqqqq] (-1.5,2.598076211353316) circle (1.5pt);
+\draw [fill=ffqqqq] (-1.0,3.4641016151377544) circle (1.5pt);
+\draw [fill=ffqqqq] (-0.5,4.330127018922193) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{center}
+\vspace{-20mm}
+
+\begin{questions}
+
+\question[4]
+\begin{parts}
+\item Express $\overrightarrow{AD}$ in terms of $\vec{u} = \overrightarrow{AB}$ and $\vec{v} = \overrightarrow{AC}$.
+\fillwithdottedlines{7mm}
+
+\fullwidth{A chocolate is hidden in bauble $E$ which satisfies $\overrightarrow{CE}=\frac{2}{3}\overrightarrow{AB}-\overrightarrow{CB}$}
+
+\item Express $\overrightarrow{CE}$ in terms of $\vec{u}$ and $\vec{v}$.
+\fillwithdottedlines{10mm}
+\item Put $E$ on the picture.
+\item Calculate angle $\widehat{ABC}$.
+\fillwithdottedlines{10mm}
+\end{parts}
+
+\question[3]
+We pick a bauble $P$ at random from all the baubles apart from $A$.
+\vspace{3mm}
+\begin{parts}
+\item What is the probability that $\overrightarrow{AP}\bullet \overrightarrow{AB}=0$? \dotfill
+\uplevel{
+To be even more festive, let's colour 2 of $A, B, C, D$ or $E$ gold, and 4 of the rest silver.
+}
+\part How many different colourings can be chosen for the \textbf{gold} baubles ?
+\fillwithdottedlines{10mm}
+\part How many different colourings can be chosen for \textbf{all} the baubles ?
+\fillwithdottedlines{10mm}
+\vspace{3mm}
+\part What is the probability that the top three baubles are gold or silver ? \dotfill
+
+\end{parts}
+\vspace{2mm}
+
+\question[1] \textbf{Xmas Bonus.} What is the probability that $\overrightarrow{AP}\bullet\overrightarrow{AB}=-6$? \dotfill
+
+\end{questions}
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

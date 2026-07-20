@@ -1,0 +1,57 @@
+\documentclass[12pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+{\small Exact values \textsc{and} decimals to 2dp} \textbf{Name:} \dotfill
+
+\begin{questions}
+
+\question[6]
+Let $X$ be the number rolled with a fair \textbf{tetrahedral} die with \textbf{4} faces : 1, 2, 3, 4.
+Calculate the probability distribution, expectation and variance of $X$.
+\fillwithdottedlines{\stretch{1}}
+
+\question
+Let $Y$ be the sum of 5 rolls of the above die.
+\begin{parts}
+\part[2] $P(Y=20) = $ \dotfill
+\part[2] $E(Y) = $ \dotfill 
+\part[2] Show that $V(Y)$ is $\tfrac{25}{4} = 6,25.$ \dotfill
+\fillwithdottedlines{7mm}
+\part[2] Use Markov's inequality to bound $P(Y \geq 18)$. 
+\fillwithdottedlines{28mm}
+\part[2] Compute $P(Y \geq 18)$ exactly. 
+\fillwithdottedlines{28mm}
+\end{parts}
+
+
+\question[0] \textbf{Bonus.}  
+How many rolls of this die do I expect before I throw a 4?
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

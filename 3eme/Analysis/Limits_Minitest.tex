@@ -1,0 +1,80 @@
+\documentclass[9pt]{exam} 
+\addpoints
+\pointsinmargin
+\renewcommand{\partshook}{
+\setlength{\topsep}{3mm} 
+\setlength{\itemsep}{5mm}
+}
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\
+
+\begin{questions}
+
+\question[5] Find the following limits (or say that such a limit doesn't exist).
+\begin{parts}
+\part $\displaystyle \lim_{x\to4} \,\, x^2 = $ \dotfill
+\part $\displaystyle \lim_{x\to0} \,\, \frac{\sin x}{x} = $ \dotfill
+\part $\displaystyle \lim_{x\to2} \,\, (x-2)^{-\tfrac{1}{2}} = $ \dotfill
+\part $\displaystyle \lim_{x\to0} \,\, \frac{x}{\sin x + \cos x} = $ \dotfill
+\end{parts}
+
+
+% \question[4] Find the second derivative of $f(x) = 2x^2 + \cos 2x $. Is $f$ concave up, down, or neither?
+\question[4] Study the continuity of 
+$f(x) = \left\{ \begin{array}{cc} x^2 - 6,& x < 4,  \\ 
+10, & x = 4, \\
+\tfrac{24}{2x + 4},  & x > 4.
+\end{array} \right.$ \hfill \emph{...and what is the domain?}
+\fillwithdottedlines{48mm}
+\vfill
+
+
+\question[5] Sketch the function $f(x) = x^3 - 3x^2$, and label the turning points and the inflection points (if any).
+
+\begin{minipage}[t]{0.6\textwidth}
+\fillwithdottedlines{48mm}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{6mm}
+\begin{tikzpicture}
+
+\draw (-1,0) -- (3, 0);
+\draw (0,-3) -- (0, 1);
+
+\end{tikzpicture}
+\end{minipage}
+
+
+\vfill
+
+\question[0] \textbf{Bonus.} From the definition, find the derivative of $\big(f(x)\big)^3$ in terms of $f(x)$ and $f'(x)$. \hfill \emph{On the back.}
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

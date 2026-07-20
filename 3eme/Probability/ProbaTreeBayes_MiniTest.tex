@@ -1,0 +1,68 @@
+\documentclass[9pt]{exam} 
+\addpoints
+\pointsinmargin
+\renewcommand{\partshook}{
+%\setlength{\topsep}{2mm}
+\setlength{\itemsep}{2mm}
+}
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+\vspace{-4mm}
+
+\textbf{Name:} \dotfill \hspace{3cm} (answers to the nearest percent)
+
+\begin{questions} 
+\question[3] From the axioms prove that $P(A) + P(\overline{A}) = 1$ for any event $A$.
+\fillwithdottedlines{23mm}
+
+\question[2] What is the chance of throwing at least one six with four fair dice?
+\fillwithdottedlines{14mm}
+
+\question We play a game of heads and tails \textbf{but the coin is not fair.} You win if the coin lands on tails in any of the first three throws (and we stop playing immediately), otherwise I win. Let $0 < p = P(H) < 1$.
+\begin{parts}
+\part[3] Represent the situation with a tree diagram.
+\vfill
+
+\part[1] What is the probability you win on the first toss? \dotfill
+\part[1] What is the probability you win on the second toss? \dotfill
+\part[1] What is the probability you win on the third toss? \dotfill
+\part[1] What is the chance I win? \dotfill
+\fillwithdottedlines{8mm}
+\part[1] If $p=\frac{1}{2} \sqrt[3]{4}$, show that we have an equal chance to win. \dotfill
+\fillwithdottedlines{8mm}
+\end{parts}
+
+\question[4] Unbelievably, 5\% of Dr. Jane's class forgot to do their homework. We know that
+\begin{itemize}
+\item 80\% of students who forgot their homework look nervous.
+\item 10\% of students who did their homework look nervous anyway. 
+\end{itemize}
+When I see a student who looks nervous what is the probability that they forgot their homework?
+
+\vspace{2mm}
+\emph{Work on the back, and then write your answer (to the nearest percent) here.} \dotfill
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:} 
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}

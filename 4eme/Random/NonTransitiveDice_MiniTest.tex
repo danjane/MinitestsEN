@@ -1,0 +1,104 @@
+\documentclass[9pt]{exam} 
+\footer{}{}{}
+\renewcommand{\partshook}{\setlength{\itemsep}{4mm}}
+
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{tcolorbox}
+\tcbset{colback=black!5!white}
+\usepackage{array}
+
+\usepackage{tikz}
+
+% ------------------------------------------------
+% HARD CODED DICE DEFINITIONS
+% ------------------------------------------------
+\usepackage{etoolbox}
+\def\diceTwo{blue}
+
+\newcommand{\setDiceTwo}{%
+\ifdefstring{\diceOne}{white}{\def\diceTwo{black}}{}%
+\ifdefstring{\diceOne}{black}{\def\diceTwo{blue}}{}%
+\ifdefstring{\diceOne}{blue}{\def\diceTwo{white}}{}%
+}
+\def\blueValues{1,4,4,4,4,4}
+\def\blackValues{2,2,2,5,5,5}
+\def\whiteValues{3,3,3,3,3,6}
+
+\newcommand{\getDiceValues}[1]{\csname #1Values\endcsname}
+
+
+\begin{document}
+
+\foreach \col in {blue,black,white} {
+
+% Set first die
+\edef\diceOne{\col}
+\setDiceTwo
+
+{\small Exact values \textsc{and} decimals to 2dp} \hfill \textbf{Name:} \dotfill
+
+\begin{questions}
+
+\begingradingrange{thisdie}
+\question[6] There are 3 dice with colours blue, black and white. Each die is fair (it has six faces with equal probability of being rolled) but the faces don't have the normal numbers. 
+
+The \textbf{\diceOne} die has faces $\getDiceValues{\diceOne}$. Let $X$ be the value rolled with the \diceOne\ die.
+
+\begin{parts}
+\begin{minipage}[t]{0.45\textwidth}
+\part Give the probability distribution of $X$.
+
+\
+
+{\large
+\renewcommand{\arraystretch}{2.5}
+\begin{tabular}{|c|p{20mm}|p{20mm}|}
+\hline
+$x_i$ && \\ \hline
+$p_i$ && \\ \hline
+\end{tabular}
+}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\part Show that the expectation $E(X) = \frac{7}{2} = 3.50$.
+\fillwithdottedlines{3cm}
+\end{minipage}
+
+\part Calculate the variance $V(X)$.
+\fillwithdottedlines{2cm}
+\end{parts}
+
+\question[6] Take $\overrightarrow{x} = \left(\begin{matrix} 12 \\ -5 \end{matrix} \right)$ and $\overrightarrow{y} = \left(\begin{matrix} 2 \\ 3 \end{matrix} \right)$.
+\begin{parts}
+\part Calculate $\| \overrightarrow{x} \| = $ \dotfill 
+\part Calculate the scalar product $\overrightarrow{x} \bullet \overrightarrow{y} = $ \dotfill
+\part Calculate the angle from $\overrightarrow{x}$ to $\overrightarrow{y}$.
+\fillwithdottedlines{\stretch{1}} 
+\part Given that $\left(\begin{matrix} \lambda \\ -6 \end{matrix} \right) \perp \big( \overrightarrow{x} - \overrightarrow{y} \big)$, find $\lambda$.
+\fillwithdottedlines{\stretch{1}} 
+
+\end{parts}
+
+\question[0] \textbf{Bonus.} The \textbf{\diceTwo\ die} has faces $\getDiceValues{\diceTwo}$. Use a probability tree to calculate the probability that the \diceOne\ die beats the \diceTwo\ die when both are rolled together.
+\endgradingrange{thisdie}
+
+\end{questions}
+
+\begin{tcolorbox}
+\textbf{Name of marker:}
+
+\begin{center}
+\partialgradetable{thisdie}[h][questions]
+\end{center}
+\end{tcolorbox}
+
+\newpage
+}
+
+\end{document}

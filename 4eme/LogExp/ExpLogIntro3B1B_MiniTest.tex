@@ -1,0 +1,125 @@
+% This document is meant to be completed before watching the video:
+%
+% www.3blue1brown.com/?v=eulers-number
+%
+% The last row of the table can then be filled in a=e, 
+% and the last column with ln(a)
+
+\documentclass[9pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage{amsmath, amssymb}
+\usepackage[a4paper, margin=20mm]{geometry} 
+\usepackage{tcolorbox} 
+\tcbset{colback=black!5!white}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+%---------------------------------------------------------
+\question[5] Develop the following expressions as linear combinations of $\ln(a)$, $\ln(b)$ and $\ln(c)$.
+\begin{parts}
+\vspace{4mm}
+\part $\ln(ab) =$ \dotfill
+\vspace{2mm}
+\part $\ln\!\left(\dfrac{a^2 b^3}{c}\right) =$ \dotfill
+\part $\ln\!\left(\dfrac{a\sqrt{b}}{c^3}\right) =$ \dotfill
+\end{parts}
+
+%---------------------------------------------------------
+\question[5] Compute the following derivatives.
+\begin{parts}
+\part $\dfrac{d}{dx}(\ln x) =$ \dotfill
+\part $\dfrac{d}{dx}(x \ln x) =$ \dotfill
+\part $\dfrac{d}{dx}(\ln(3x^2 + 1)) =$ \dotfill
+\fillwithdottedlines{14mm}
+\end{parts}
+
+
+%---------------------------------------------------------
+\question[2] Reminder: $(e^x)' = e^x$. Use this to compute the derivative of $e^{cx}$, where $c \in \mathbb{R}$ is a constant.
+\fillwithdottedlines{21mm}
+
+
+%---------------------------------------------------------
+\question[4] Which of the following functions models the size of a population which \textbf{doubles} every day after $x$ days?
+
+\begin{oneparchoices}
+\choice $f(x) = 2x$
+\choice $f(x) = x^2$
+\choice $f(x) = 2^x$
+\choice $f(x) = x + 2$
+\end{oneparchoices}
+
+\begin{minipage}[t]{0.5\textwidth}
+Complete the table for your chosen function.
+
+\vspace{4mm}
+
+{\Large
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c|cccccc}
+$x$ & 0 & 1 & 2 & 3 & 4 & 10 \\ \hline
+$f(x)$ & & & & & & 
+\end{tabular}
+}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+
+Solve algebraically for $f(x) = 900$. \hfill \emph{CRM p.14}
+\fillwithdottedlines{21mm}
+
+\end{minipage}
+
+%---------------------------------------------------------
+\question[2] Complete the following table for the expression $\dfrac{a^{dt} - 1}{dt}$,
+using $dt = 1,\; 0.01,\; 0.00001$ and $a = 2, 3, 8$.
+
+\begin{center} \Large
+$\displaystyle \dfrac{a^{dt} - 1}{dt} \qquad $
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c|cccc|c}
+$a$ & $dt=1$ & $0.01$ & $0.00001$ & & \hspace{30mm} \\ \hline
+2 &  &  &  &  & \\ \hline
+3 &  &  &  &  & \\ \hline
+8 &  &  &  &  & \\ \hline
+ &  &  &  &  &
+\end{tabular}
+\end{center}
+
+
+\vfill
+
+\question[0] \textbf{Bonus.} For $f(x) = x \ln (x)$, the equation of the tangent line at $x = e$ is \dotfill \emph{\footnotesize(work on the back).}
+
+\end{questions}
+
+%---------------------------------------------------------
+
+\begin{tcolorbox}
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{c|cccc|c}
+$a$ & $\Delta x=1$ & $0.01$ & $0.0001$ & $0.000001$ & \hspace{30mm} \\ \hline
+2 & 1.0000 & 0.693 & 0.6931 & 0.69315 & \\
+3 & 2.0000 & 1.099 & 1.0986 & 1.09861 & \\
+8 & 7.0000 & 2.079 & 2.0794 & 2.07944 &
+\end{tabular}
+\end{center}

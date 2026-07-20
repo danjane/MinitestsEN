@@ -1,0 +1,73 @@
+\documentclass[12pt]{exam} 
+\renewcommand{\partshook}{
+	\setlength{\itemsep}{5mm}
+}
+%\renewcommand{\thepartno}{\roman{partno}}
+\addpoints
+
+\usepackage{cmbright}
+
+\pagestyle{empty} %for handouts
+\addtolength{\jot}{2em} % this makes all formulae a bit more spaced vertically for handouts
+\setlength{\parindent}{0pt} %we're not writing a novel
+%\renewcommand{\arraystretch}{2} %makes tables taller, so easier to write in
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{tcolorbox}
+\usepackage{systeme}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+
+\question[6] Solve the following simultaneous equations
+
+\fullwidth{
+
+\begin{parts}
+\begin{minipage}{0.45\textwidth}
+\part \hspace{2mm} \systeme{6x + 1 = y, 5x + 3 = y}
+\fillwithdottedlines{70mm}
+\end{minipage}
+\hspace{2mm}
+\vrule
+\hspace{8mm}
+\begin{minipage}{0.45\textwidth}
+\part \hspace{2mm} \systeme{2x+10y = 26, 6x-5y = 8}
+\fillwithdottedlines{70mm}
+\end{minipage}
+\end{parts}
+}
+
+\
+
+\question[3] Solve the simultaneous equations \hspace{5mm} \systeme{x^2 + y^2 = 13, x + y = 1.}
+
+\fullwidth{
+\fillwithdottedlines{70mm}
+}
+
+\end{questions}
+
+\vfill
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

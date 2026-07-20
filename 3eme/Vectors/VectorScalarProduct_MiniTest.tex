@@ -1,0 +1,59 @@
+\documentclass[9pt]{exam} 
+\addpoints
+\pointsinmargin
+
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb} %standard classy maths symbols
+\usepackage[a4paper, margin=1in]{geometry} %makes it easy to specify where to put stuff on the page
+
+\usepackage{tcolorbox} % basic but good package for boxes around text
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz} % interval diagrams, sets, etc.
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\
+
+For $\overrightarrow{a} = \left(\begin{matrix} a_1 \\ a_2 \end{matrix} \right)$ and $\overrightarrow{b} = \left(\begin{matrix} b_1 \\ b_2 \end{matrix} \right)$ the \textbf{scalar product} is $ a \bullet b = \| \overrightarrow{a} \| \cdot \| \overrightarrow{b} \| \cdot \cos \theta = a_1 \cdot b_1 + a_2 \cdot b_2$.
+
+\begin{questions} 
+\question Take $\overrightarrow{x} = \left(\begin{matrix} 3 \\ 4 \end{matrix} \right)$ and $\overrightarrow{y} = \left(\begin{matrix} 12 \\ -5 \end{matrix} \right)$.
+\begin{parts}
+\part[1] Calculate the scalar product of $\overrightarrow{x}$ and $\overrightarrow{y}$.
+\fillwithdottedlines{1cm} 
+\part[4] Calculate the angle from $\overrightarrow{x}$ to $\overrightarrow{y}$.
+\fillwithdottedlines{5cm} 
+\end{parts}
+
+\question[4] Given that $\left(\begin{matrix} \sqrt{3} \\ -6 \end{matrix} \right) \perp \left(\begin{matrix} \sqrt{27} \\ \lambda \end{matrix} \right)$, find $\lambda$.
+\fillwithdottedlines{3cm}
+
+\question[3] Simplify $\overrightarrow{a} \bullet (\overrightarrow{b} + \overrightarrow{c}) -  \overrightarrow{b} \bullet (\overrightarrow{a} -\overrightarrow{c})$, given that $\overrightarrow{b} \perp \overrightarrow{c}$.
+\hfill \emph{Do not use column notation.}
+\fillwithdottedlines{4cm}
+
+\vfill
+
+\question[0] \textbf{Bonus.} 
+Use vectors to prove that $P$ lies on the circle with diameter $[AB]$ if and only if $A\hat{P}B = 90^\circ$.
+
+\hfill \emph{Work on the back.}
+
+\end{questions}
+
+
+\begin{tcolorbox}
+
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+
+\end{document}

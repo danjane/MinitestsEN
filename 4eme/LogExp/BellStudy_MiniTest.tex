@@ -1,0 +1,84 @@
+\documentclass[9pt]{exam} 
+\footer{}{}{}
+\addpoints
+\pointsinmargin
+
+\usepackage{amsmath, amssymb}
+\usepackage[a4paper, margin=20mm]{geometry} 
+\usepackage{tcolorbox} 
+\tcbset{colback=black!5!white}
+
+\usepackage{tikz}
+
+\begin{document}
+
+\textbf{Name:} \dotfill
+
+\begin{questions}
+
+% -------------------
+\question[5] Let $f(x) = e^{x}$.
+\begin{parts}
+\begin{minipage}[t]{0.45\textwidth}
+\part Find the derivative $f'(0)$. 
+\fillwithdottedlines{18mm}
+\part Calculate $\displaystyle \lim_{x\to-\infty} f(x).$
+\fillwithdottedlines{18mm}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0mm}
+\part Sketch $y=e^x$ and $y=e^{-x}$.
+
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-4,0)--(4,0) node[below]{$x$};
+\draw[->] (0,-0.5)--(0,4) node[left]{$y$};
+\draw (-0.1,1) node[left]{$1$} --(0.1,1);
+\end{tikzpicture}
+
+\end{minipage}
+\end{parts}
+
+
+\question[5] Let $g(x) = \exp\big( - |x|\, \big)$.
+\begin{parts}
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0mm}
+\part Sketch $y=g(x)$.
+
+\begin{tikzpicture}[scale=0.8]
+\draw[->] (-4,0)--(4,0) node[below]{$x$};
+\draw[->] (0,-0.5)--(0,4) node[left]{$y$};
+\end{tikzpicture}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth}
+\vspace{2mm}
+\part Is $g$ differentiable? Explain. 
+\fillwithdottedlines{35mm}
+\end{minipage}
+\end{parts}
+
+\question[4] Let $h(x) = \exp(-x^2)$. Find $h'(x)$, $h''(x)$, and the table of variations.
+\fillwithdottedlines{\stretch{1}}
+
+\question[0] \textbf{Bonus.} Calculate the \emph{inflection points} where $h''(x) = 0$.
+
+\question[0] \textbf{Bonus.} Calculate the tangent of $h$ at $x=0$.
+
+\question[0] \textbf{Bonus.} Unbelievably, $\int_{-\infty}^{\infty} \exp(-x^2) \, dx = \sqrt{\pi}$. Use this to find $\int_{-\infty}^{\infty} \exp(-x^2/2) \, dx$.
+
+
+\end{questions}
+
+\begin{tcolorbox}
+\textbf{Name of marker:}
+
+\begin{center}
+\gradetable[h][questions]
+\end{center}
+
+\end{tcolorbox}
+
+\end{document}
